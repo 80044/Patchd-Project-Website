@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patch'd | Home</title>
+    <link rel="manifest" href="/manifest.json">
+
+    <link rel="stylesheet" href="/assets/styles/Home.css">
+    <link rel="stylesheet" href="/assets/styles/Transition.css">
+
+
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/d78d9832b3.js" crossorigin="anonymous"></script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    
+
+    <!-- Bricolage Grotesque Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@200..800&display=swap" rel="stylesheet">
+    <!-- Playwrite DK Uloopet Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+DK+Uloopet+Guides&family=Playwrite+DK+Uloopet:wght@100..400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Sale Banner -->
+    <div class="salebanner">
+        <div class="container">
+            <p>Get 20% off on your first order!</p>
+
+        </div>
+    </div>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbarinner">
+
+                <!-- Hamburger (visible on small screens) -->
+                <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+                    <span class="hamburger-bar" aria-hidden="true"></span>
+                    <span class="hamburger-bar" aria-hidden="true"></span>
+                    <span class="hamburger-bar" aria-hidden="true"></span>
+                </button>
+
+                <!-- Navigation Links (desktop) -->
+                <div class="navlinks">
+                    <a href="Shop.html?sort=none" class="navlink" >Shop All</a>
+                    <a href="Shop.html?sort=new" class="navlink" >New Arrivals</a>
+                    <a href="Shop.html?sort=collection" class="navlink" >Collections</a>
+                    <a href="Home.html" class="navlink" >About Us</a>
+                </div>
+
+                 <!-- Logo -->
+                <a href="/" class="logo">Patch'd</a>
+
+                <!-- Icons -->
+                <div class="navicons">
+                    <div class="search-container">
+                        <input type="search" placeholder="Search" aria-label="Search">
+                    </div>
+
+                    <button class="iconbtn" aria-label="Account"><i class="fas fa-user"></i></button>
+                    <a href="Cart.html" class="iconbtn" aria-label="Cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cartbadge">0</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Mobile menu -->
+            <div class="mobileMenu" id="mobileMenu" aria-hidden="true" role="menu">
+                <a href="Shop.html?sort=none" class="navlink" role="menuitem">Shop All</a>
+                <a href="Shop.html?sort=new" class="navlink" role="menuitem">New Arrivals</a>
+                <a href="Shop.html?sort=collection" class="navlink" role="menuitem">Collections</a>
+                <a href="Home.html" class="navlink" role="menuitem">About Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="slideshow-container">
+
+
+            <!-- use https://picsum.photos/1200/600?random=1 for random img-->
+
+            <!-- Image Slideshow -->
+            <div class="mySlides fade">
+                <img class="blurredImage" src="/assets/images/Image Carousel/ImgCaro1.jpg" style="width:100%">
+                <div class="SlideContent">
+                    <h2 class="SlideHeading">Welcome to 
+                        <span class="SlideLogo">Patch'd!</span>
+                    </h2>
+                    <p class="SlideSubheading">Discover premium streetwear and unique garments</p>
+                    <a href="Shop.html" class="SlideBtn">Shop Now</a>
+                </div>
+            </div>
+
+            <div class="mySlides fade">
+                <img class="blurredImage" src="/assets/images/Image Carousel/ImgCaro2.jpg" style="width:100%">
+                <div class="SlideContent">
+                    <h2 class="SlideHeading">Discover Our Latest Collection</h2>
+                    <p class="SlideSubheading">Stay ahead of the trends with our new arrivals</p>
+                    <a href="Shop.html" class="SlideBtn">Shop Now</a>
+                </div>
+            </div>
+
+            <div class="mySlides fade">
+                <img class="blurredImage" src="/assets/images/Image Carousel/ImgCaro3.jpg" style="width:100%">
+                <div class="SlideContent">
+                    <h2 class="SlideHeading">Shop the Newest Trends</h2>
+                    <p class="SlideSubheading">Be the first to explore our latest styles</p>
+                    <a href="Shop.html" class="SlideBtn">Shop Now</a>
+                </div>
+            </div>
+
+            <!-- Next and previous buttons -->
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+        </div>
+        <br>
+    </div>
+
+        <!-- Slideshow script -->
+    <script src="/src/scripts/ImageCarousel.js" ></script>
+
+    <div class="SaleReminder">
+        <div class="marquee-wrapper">                    
+            <p class="ScrollingText marquee-content">
+            Get 20% off on your first order!        
+            </p>
+            <p class="ScrollingText marquee-content">      
+            Get 20% off on your first order!        
+            </p>
+        </div>
+    </div>
+
+        <!-- Marquee script -->
+    <script src="/src/scripts/marquee.js"></script>
+
+    <div class="container">
+        <div class="hero">
+
+            <div class="FeaturedClothes">
+                <h1>Featured Clothes</h1>
+            </div>
+
+            <div class="FeaturedShowcase">
+                
+            </div>
+
+        </div>
+    </div>
+
+    <div class="NextDrop">
+        <h1>Next Drop</h1>
+
+        <!-- Countdown (replaced previous <p id="demo"></p>) -->
+        <div class="countdown" id="countdown" aria-label="Countdown to next drop">
+            <div class="time-box">
+                <div class="time-number" id="days">0</div>
+                <div class="time-label">Days</div>
+            </div>
+            <div class="time-box">
+                <div class="time-number" id="hours">0</div>
+                <div class="time-label">Hours</div>
+            </div>
+            <div class="time-box">
+                <div class="time-number" id="minutes">0</div>
+                <div class="time-label">Minutes</div>
+            </div>
+            <div class="time-box">
+                <div class="time-number" id="seconds">0</div>
+                <div class="time-label">Seconds</div>
+            </div>
+        </div>
+
+        <h2>Sign up for our newsletter to keep up with our latest drops!</h2>
+    </div>
+
+    <script src="/src/scripts/DropCount.js"></script>
+
+
+    <div class="Description">
+        <h1>We don't follow trends. <br> We set them.</h1>
+        <p>Born from the streets. Built for those who refuse to blend in. 
+            <br> 
+            Every piece tells a story. Every drop is a statement.</p>
+
+        <h1>
+            <span id="atpatchd">@</span>
+            <span id="Patchd">Patch'd</span>
+        </h1>
+
+        <div class="row">
+            <div class="column">
+                <img src="/assets/images/Description Image Grid/DescImg1.jpg">
+                <img src="/assets/images/Description Image Grid/DescImg2.jpg">
+            </div>
+            <div class="column">
+                <img src="/assets/images/Description Image Grid/DescImg3.jpg">
+                <img src="/assets/images/Description Image Grid/DescImg4.jpg">
+            </div>
+            <div class="column">
+                <img src="/assets/images/Description Image Grid/DescImg5.jpg">
+                <img src="/assets/images/Description Image Grid/DescImg6.jpg">
+            </div>
+            <div class="column">
+                <img src="/assets/images/Description Image Grid/DescImg7.jpg">
+                <img src="/assets/images/Description Image Grid/DescImg8.jpg">
+            </div>
+        </div>
+    </div>
+
+    <footer>
+
+        <div class="footDesc">
+            <h1>Patch'd</h1>
+            <p>Discover the latest trends and exclusive drops at Patch'd. 
+                <br>Join our community and express your unique style.</p>
+        </div>
+
+        <div class="shopLinks">
+            <ul style="list-style-type:none;">
+                <li><h2>Shop</h2></li>
+                <li><a href="Shop.html?sort=none">All Products</a></li>
+                <li><a href="Shop.html?sort=new">New Arrivals</a></li>
+                <li><a href="Shop.html?sort=collection">Collections</a></li>
+                <li><a href="Home.html">About Us</a></li>
+
+            </ul>
+        </div>
+
+        <div class="supportLinks">
+            <ul style="list-style-type:none;">
+                <li><h2>Support</h2></li>
+                <li><a href="PP.html">Privacy Policy</a></li>
+                <li><a href="T&C.html">Terms and Conditions</a></li>
+                <li><a href="RP.html">Refund Policy</a></li>
+                <li><a href="Home.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="socialLinks">
+            <h2>Follow Us</h2>
+            <ul style="list-style-type:none;">
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">TikTok</a></li>
+                <li><a href="#">Pinterest</a></li>
+            </ul>
+        </div>
+    </footer>
+
+  <script src="/src/scripts/nav.js"></script>
+  <script src="/src/scripts/ImageCarousel.js"></script>
+  <script src="/src/scripts/marquee.js"></script>
+  <script src="/src/scripts/DropCount.js"></script>
+  <script src="/app.js"></script>
+  <script src="/src/scripts/cart.js"></script>
+</body>
+</html>

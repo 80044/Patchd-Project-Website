@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Patch'd | Shop</title>
+    <link rel="manifest" href="/manifest.json">
+
+    <link rel="stylesheet" href="/assets/styles/Home.css">
+    <link rel="stylesheet" href="/assets/styles/Transition.css">
+    <link rel="stylesheet" href="/assets/styles/Shop.css">
+    <link rel="stylesheet" href="/assets/styles/IMG.css">
+    <link rel="stylesheet" href="../../public/assets/styles/Home.css">
+    <link rel="stylesheet" href="../../public/assets/styles/Transition.css">
+    <link rel="stylesheet" href="../../public/assets/styles/Shop.css">
+
+
+    <!-- Icons -->
+    <script src="https://kit.fontawesome.com/d78d9832b3.js" crossorigin="anonymous"></script>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Bricolage Grotesque Font-->
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@200..800&display=swap" rel="stylesheet">
+    <!-- Playwrite DK Uloopet Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Playwrite+DK+Uloopet+Guides&family=Playwrite+DK+Uloopet:wght@100..400&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- Sale Banner -->
+    <div class="salebanner">
+        <div class="container">
+            <p>Get 20% off on your first order!</p>
+
+        </div>
+    </div>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="navbarinner">
+
+                <!-- Hamburger (visible on small screens) -->
+                <button class="hamburger" id="hamburger" aria-label="Open menu" aria-expanded="false">
+                    <span class="hamburger-bar" aria-hidden="true"></span>
+                    <span class="hamburger-bar" aria-hidden="true"></span>
+                    <span class="hamburger-bar" aria-hidden="true"></span>
+                </button>
+
+                <!-- Navigation Links (desktop) -->
+                <div class="navlinks">
+                    <a href="Shop.html?sort=none" class="navlink" >Shop All</a>
+                    <a href="Shop.html?sort=new" class="navlink" >New Arrivals</a>
+                    <a href="Shop.html?sort=collection" class="navlink" >Collections</a>
+                    <a href="Home.html" class="navlink" >About Us</a>
+                </div>
+
+                 <!-- Logo -->
+                <a href="/src/pages/Home.html" class="logo">Patch'd</a>
+
+                <!-- Icons -->
+                <div class="navicons">
+                    <div class="search-container">
+                        <input type="search" placeholder="Search" aria-label="Search">
+                    </div>
+
+                    <button class="iconbtn" aria-label="Account"><i class="fas fa-user"></i></button>
+                    <a href="Cart.html" class="iconbtn" aria-label="Cart">
+                        <i class="fas fa-shopping-cart"></i>
+                        <span class="cartbadge">0</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Mobile menu -->
+            <div class="mobileMenu" id="mobileMenu" aria-hidden="true" role="menu">
+                <a href="Shop.html?sort=none" class="navlink" role="menuitem">Shop All</a>
+                <a href="Shop.html?sort=new" class="navlink" role="menuitem">New Arrivals</a>
+                <a href="Shop.html?sort=collection" class="navlink" role="menuitem">Collections</a>
+                <a href="Home.html" class="navlink" role="menuitem">About Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <script src="../scripts/nav.js"></script>
+
+    <!-- Refund Policy -->
+    <img src="/assets/images/RP.jpg" alt="Refund Policy" class="refundPolicyImg">
+   
+           
+
+    <script src="/src/scripts/cart.js"></script>
+    <script src="/app.js"></script>
+
+
+    <footer>
+
+        <div class="footDesc">
+            <h1>Patch'd</h1>
+            <p>Discover the latest trends and exclusive drops at Patch'd. 
+                <br>Join our community and express your unique style.</p>
+        </div>
+
+        <div class="shopLinks">
+            <ul style="list-style-type:none;">
+                <li><h2>Shop</h2></li>
+                <li><a href="Shop.html?sort=none">All Products</a></li>
+                <li><a href="Shop.html?sort=new">New Arrivals</a></li>
+                <li><a href="Shop.html?sort=collection">Collections</a></li>
+                <li><a href="Home.html">About Us</a></li>
+
+            </ul>
+        </div>
+
+        <div class="supportLinks">
+            <ul style="list-style-type:none;">
+                <li><h2>Support</h2></li>
+                <li><a href="Home.html">Privacy Policy</a></li>
+                <li><a href="Home.html">Terms and Conditions</a></li>
+                <li><a href="Home.html">Refund Policy</a></li>
+                <li><a href="Home.html">Contact Us</a></li>
+            </ul>
+        </div>
+
+        <div class="socialLinks">
+            <h2>Follow Us</h2>
+            <ul style="list-style-type:none;">
+                <li><a href="#">Instagram</a></li>
+                <li><a href="#">TikTok</a></li>
+                <li><a href="#">Pinterest</a></li>
+            </ul>
+        </div>
+    </footer>
+
+</body>
