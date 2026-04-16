@@ -1,0 +1,168 @@
+:root {
+  --intro-bg: linear-gradient(180deg, rgba(234,224,213,1) 0%, rgba(250,250,250,1) 100%);
+  --intro-foreground: var(--color-primary, #22333b);
+  --intro-accent: var(--color-accent, #5e503f);
+  --intro-contrast: var(--color-background, #eae0d5);
+  --max-width: 1200px;
+}
+
+*{
+    box-sizing:border-box
+}
+
+html,body{
+    height:100%;
+    min-height: 100vh;
+}
+
+body.indexPage{
+  margin:0;
+  font-family: var(--font-sans, "Inter", system-ui, sans-serif);
+  background: var(--intro-bg);
+  color: var(--intro-foreground);
+  -webkit-font-smoothing:antialiased;
+  -moz-osx-font-smoothing:grayscale;
+  display:flex;
+  flex-direction:column;
+  min-height:100vh;
+  letter-spacing:0.01em;
+}
+
+/* Header */
+.indexHeader{
+  width:100%;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:24px 6vw;
+  position:fixed;
+  top:0;
+  z-index:40;
+  background: transparent;
+
+  .logo {
+    transition: transform .18s ease-in-out, box-shadow .18s ease-in-out;
+    &:hover{
+    transform:translateY(-2px);
+    text-shadow: 0 4px 12px rgba(34,33,35,0.1);
+    }
+  }
+  
+}
+
+.logo span{
+  display:inline-block;
+  font-weight:800;
+  font-size:20px;
+  color:var(--intro-foreground);
+  letter-spacing:0.06em;
+  font-family: "Playwrite DK Uloopet", sans-serif;
+}
+
+.social a{
+  color:var(--color-grey-7, #27272a);
+  text-decoration:none;
+  margin-left:12px;
+  font-weight:600;
+  opacity:0.92;
+}
+
+/* Hero */
+.indexHero{
+  margin-top:0;
+  padding:calc(18vh) 6vw;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex:1 0 auto;
+  text-align:center;
+  min-height:calc(100vh - 120px);
+  position:relative;
+  overflow:hidden;
+}
+
+.indexContent{
+  max-width:var(--max-width);
+  width:100%;
+  margin:0 auto;
+  z-index:2;
+}
+
+.brandTitle{margin:0 0 12px 0;font-size:clamp(32px,9vw,96px);line-height:1;}
+
+.brandBox{
+  display:inline-block;
+  background:var(--intro-accent);
+  color:var(--intro-contrast);
+  padding:12px 20px;
+  font-weight:800;
+  letter-spacing:0.14em;
+  transform:skewX(-4deg);
+  box-shadow: 0 12px 30px rgba(34,33,35,0.06);
+  font-family: "Playwrite DK Uloopet", sans-serif;
+}
+
+/* Tagline */
+.tagline{
+  margin:18px 0 28px;
+  font-size:clamp(14px,2.2vw,20px);
+  color: var(--color-grey-7, #27272a);
+  opacity:0.95;
+}
+
+/* Buttons reuse site look */
+.actions{display:flex;gap:12px;justify-content:center;flex-wrap:wrap}
+.btn{
+  text-decoration:none;
+  padding:12px 22px;
+  border-radius:999px;
+  font-weight:700;
+  letter-spacing:0.04em;
+  transition:transform .18s ease, box-shadow .18s ease, opacity .12s ease;
+  display:inline-block;
+  font-family: var(--font-sans);
+}
+.btn--primary{
+  background:var(--intro-foreground);
+  color:var(--intro-contrast);
+  box-shadow: 0 8px 20px rgba(34,51,59,0.08);
+}
+.btn--ghost{
+  background:transparent;
+  color:var(--intro-foreground);
+  border:1px solid rgba(34,51,59,0.06);
+}
+
+/* subtle hover */
+.btn:hover{transform:translateY(-4px);opacity:0.98}
+.btn:active{transform:translateY(-1px)}
+
+/* small credit */
+.indexCredit{
+  position:absolute;
+  right:6vw;
+  bottom:8vh;
+  font-size:12px;
+  color:rgba(34,33,35,0.22);
+  letter-spacing:0.12em;
+}
+
+
+/* Entrance animation */
+.indexHero .indexContent{
+  transform:translateY(10px);
+  opacity:0;
+  animation:fadeUp .9s cubic-bezier(.2,.9,.2,1) .12s forwards;
+}
+@keyframes fadeUp{
+  to{transform:none;opacity:1}
+}
+
+/* Responsive tweaks */
+@media (max-width:640px){
+  .indexHeader{padding:18px 4vw}
+  .indexCredit{display:none}
+  .brandTitle{font-size:clamp(24px,8vw,64px)}
+  .tagline{font-size:clamp(12px,3vw,18px)}
+  .btn{padding:10px 18px}
+}

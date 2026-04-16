@@ -1,0 +1,126 @@
+
+
+.cartContainer {
+    justify-content: center;
+    margin: 2rem auto 2rem auto;
+    min-height: 65vh;
+    width: 75%;
+    background-color: white;
+    border-radius: 4rem;
+    box-shadow: 0 4px 12px rgba(34,51,59,0.25);
+
+    .cartHeader {
+        color: var(--color-primary);
+        font-family: var(--font-H1);
+        text-align: center;
+        top: 2rem;
+        position: relative;
+        border-bottom: 1px solid rgba(34, 51, 59, 0.16);
+    }
+}
+
+.cartItemsList {
+    width: 88%;
+    margin: 4rem auto 1rem auto;
+    display: grid;
+    gap: 0.9rem;
+}
+
+.cartItem {
+    display: grid;
+    grid-template-columns: 84px 1fr auto;
+    align-items: center;
+    gap: 1rem;
+    background: #f8f8f8;
+    border: 1px solid rgba(34, 51, 59, 0.12);
+    border-radius: 12px;
+    padding: 0.8rem;
+}
+
+.cartItemImage {
+    width: 84px;
+    height: 84px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.cartItemInfo h3 {
+    margin: 0;
+    color: var(--color-primary);
+    font-family: var(--font-H1);
+    font-size: 1rem;
+}
+
+.cartItemInfo p {
+    margin: 0.2rem 0 0 0;
+    color: var(--color-accent);
+}
+
+.cartRemoveBtn {
+    border: none;
+    border-radius: 999px;
+    background: var(--color-primary);
+    color: var(--color-background);
+    padding: 0.45rem 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+
+    &:hover {
+        transform: translateY(-2px) scale(1.02);
+        box-shadow: 0 4px 12px rgba(34,51,59,0.25);
+    }
+}
+
+.cartTotal {
+    width: 88%;
+    margin: 0 auto;
+    text-align: right;
+    color: var(--color-primary);
+    font-family: var(--font-H1);
+    font-size: 1.1rem;
+    padding-bottom: 0.75rem;
+}
+
+.cartSummary {
+    width: 88%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.8rem;
+    padding-bottom: 3rem;
+}
+
+.checkoutBtn {
+    border: none;
+    border-radius: 999px;
+    background: var(--color-primary);
+    color: var(--color-background);
+    padding: 0.7rem 1.4rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: transform 0.2s ease;
+
+    &:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 12px rgba(34,51,59,0.25);
+    }
+
+    &:active {
+        transform: scale(0.98);
+    }
+
+    &:disabled {
+        opacity: 0.5;
+        cursor: not-allowed;
+    }
+}
+
+
+
+.cartEmpty {
+    color: var(--color-accent);
+    text-align: center;
+    font-size: 1rem;
+}
